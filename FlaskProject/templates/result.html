@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+header{
+  background-color: red;
+  
+}
+footer{
+  background-color: red;
+  color: #fff;
+}
+  </style>
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Prediction Result</title>
+</head 
+<body>
+
+   
+
+
+<br>
+<section>
+<div class="container-fluid">
+  
+ 
+    
+
+
+
+<div class=" modal-dialog-scrollable" style="overflow:hidden" role="document">
+  <div class="modal-content">
+    <div class="modal-header bg-primary">
+      <div class="text-center text-white">
+      <h3 class="modal-title " id="exampleModal3Label">Result</h3>
+    </div>
+    </div>
+    {% for result,news,img in h %}
+    <div class="modal-body">
+     
+      {% if result=='Real' %}
+      <h3 class=" text-center">Your News Predection Result Is : <span  class="badge badge-success"> {{result}}</span></h3>
+      {% else %}
+      <h3 class=" text-center">Your News Predection Result Is : <span  class="badge badge-danger"> {{result}}</span></h3>
+      {% endif %}
+  <div class="text-center">
+<img class="rounded-circle" src="{{img}}" alt="Generic placeholder image">
+
+
+
+
+<h3 class=" text-center">Your Enter News Is</h3>
+<p class="text-uppercase">{{news}}</p>
+    
+   
+  </div>
+</div>
+{% endfor %}
+</div>
+</div>
+</section>
+<br>
+                
+                            <div class="container-fluid">
+                              <form class="form-group" action="" method="post">
+            
+							<h3>Submit This  Result To Our Database:</h3>
+                              
+              <button class="btn btn-success" type="submit" name="submit" value="add">Submit</button>
+                                <button type="submit" name="submit" value="back" class="btn btn-danger">Back</button>
+                              </form>
+                            </div>
+                               
+             <br>
+
+                           
+             <footer>
+              <div class="page-footer font-small teal pt-4 bg-primary">
+              <div class="container-fluid text-center text-md-left">
+                <div class="row">
+                  <div class="col-md-6 mt-md-0 mt-3">
+                    
+                        <h5 class="text-uppercase">About Us</h2>
+                     
+                      <p>We are B.tech 2nd year Student</p>
+                    </div>
+                 
+                  
+                  
+                  <hr class="clearfix w-100 d-md-none pb-3">
+                  <div class="col-md-3 mb-md-0 mb-3">
+                   
+                        <h5 class="text-uppercase">More Information</h5>
+                      
+                      <ul class="list-unstyled ">
+                        <li>Phone: <a class="text-dark" href="#"> 918116787628</a></li>
+                        <li>Email: <a class="text-dark" href="#">mail@company.com</a></li>
+                        <li>Support: <a class="text-dark" href="#">support@company.com</a></li>
+                        <li>Website: <a class="text-dark" href="#">www.company.com</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-3 mb-md-0 mb-3">
+                   
+                      <h5 class="text-uppercase">Connect</h5>
+                    
+                    <ul class="list-unstyled">
+                      <li>Our Team <a href="#"></a></li>
+                      <li>Project Github <a href="#"></a></li>
+                      <li>Contact <a href="#"></a></li>
+                      
+                    </ul>
+                    </div>
+                    </div>
+                  </div>
+                  
+                  </div>
+                 
+                  <div class="footer-copyright text-center bg-secondary">
+                    <p>Copyright &copy; 2020 FakeNewsDetector
+              - Designed by <a rel="nofollow" href="">Suman Mondal</a></p>
+                  </div>
+              </div>
+             
+            </footer>  
+                                          
+</body>
+
+</html>
+
